@@ -25,7 +25,6 @@ if __name__ == '__main__':
     optimalTrajectory,rewards = mySolver.solve()
     print(f"Number of polar bears hit with optimal trajectory: {-rewards}")
     print(f"Optimal trajectory: {optimalTrajectory}")
-    #myIceWorld.visualizeTrajectory(optimalTrajectory)
     if not os.path.exists(outputDir):
         os.mkdir(outputDir)
     myIceWorld.visualizeTrajectory(optimalTrajectory)

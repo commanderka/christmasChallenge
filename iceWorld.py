@@ -62,13 +62,15 @@ class IceWorld:
             shape = self.booleanRepresentation.shape
             for nRow in range(shape[0]):
                 for nCol in range(shape[1]):
-                    if self.booleanRepresentation[nRow][nCol] == 1:
-                        f.write(self.polarBearChar)
-                    else:
-                        f.write(self.emptyCellChar)
-
                     if trajectoryMatrix[nRow][nCol] == 1:
                         f.write(self.trajectoryChar)
+                    else:
+                        if self.booleanRepresentation[nRow][nCol] == 1:
+                            f.write(self.polarBearChar)
+                        else:
+                            f.write(self.emptyCellChar)
+
+
                 f.write("\n")
 
     def visualizeTrajectory(self,trajectory):

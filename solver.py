@@ -21,7 +21,7 @@ class QLearningSolver:
     This is needed to index the Q table properly, as we need integer values
     '''
     def stateTupleToStateValue(self,stateTuple):
-        return stateTuple[0] * stateTuple[1]
+        return (stateTuple[0]+1) * stateTuple[1]
     def stateValueToStateTuple(self,stateValue):
         row = int(stateValue/self.worldDimension[1])
         col = stateValue % self.worldDimension[1]
@@ -89,6 +89,20 @@ class QLearningSolver:
         return trajectory
 
     def solve(self):
+        #preinit Q table
+        #all Q(state,action) values leading to a polar bear are set to -1
+        print("Preallocating Q table")
+        polarBearIndicesX,polarBearIndicesY = np.where(self.iceWorld.booleanRepresentation == 1)
+        for elementIndex in range(len(polarBearIndicesX)):
+            for currentActionIndex in range(len(self.iceWorld.actions)):
+                currentAction = self.iceWorld.actions[currentActionIndex]
+                xCoordinate = polarBearIndicesX[elementIndex] - currentAction[0]
+                yCoordinate = polarBearIndicesY[elementIndex] - currentAction[1]
+                if xCoordinate >=0 and yCoordinate >=0:
+                    state = (xCoordinate,yCoordinate)
+                    stateValue = self.stateTupleToStateValue(state)
+                    self.qTable[stateValue,currentActionIndex] = -1
+        print("Preallocating Q table done")
         #solve until hit polar bears is not decreasing for at least 10 trajectories
         accumulatedRewards = - sys.maxsize -1
         nTrajectoriesWithoutChange = 0
@@ -97,9 +111,10 @@ class QLearningSolver:
             if currentAccumulatedRewards > accumulatedRewards:
                 accumulatedRewards = currentAccumulatedRewards
                 nTrajectoriesWithoutChange = 0
+                print(f"Current number of polar bears hit: {-accumulatedRewards}")
             else:
                 nTrajectoriesWithoutChange += 1
-            print(f"Current number of polar bears hit: {-accumulatedRewards}")
+
             if currentAccumulatedRewards == 0:
                 return trajectory,accumulatedRewards
         return trajectory,accumulatedRewards
