@@ -51,8 +51,6 @@ class QLearningSolver:
             else:
                 actionIndex = self.selectBestActionIndex(currentState,possibleActionIndices)
             action = self.iceWorld.actions[actionIndex]
-            if self.iceWorld.performAction(currentState,action) is None:
-                print("Hallo")
             nextState,reward = self.iceWorld.performAction(currentState,action)
             accumulatedRewards += reward
             self.updateQTable(currentState,actionIndex,nextState,reward)
