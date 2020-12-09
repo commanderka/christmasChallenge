@@ -60,7 +60,7 @@ estimate of the maximum reward we can expect from the new state. For this task I
 My algorithm generates (Q-table guided) trajectories as long as there is no change in the number of hit polar bears for
 a predefined number of trajectories or 0 hits are reached.
 
-#Results
+# Results
 1./2.
 
 ```
