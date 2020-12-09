@@ -10,6 +10,7 @@ class IceWorld:
     def __init__(self,polarBearChar='#', emptyCellChar="."):
         self.polarBearChar = polarBearChar
         self.emptyCellChar = emptyCellChar
+        self.trajectoryChar = 'x'
         self.actions = [(1,1), (1,3), (1,5), (1,7), (2,1)]
         pass
     def getDimension(self):
@@ -47,12 +48,28 @@ class IceWorld:
             if replicateRows:
                 nRows = self.booleanRepresentation.shape[0]
                 nCols = self.booleanRepresentation.shape[1]
+                #as 7 is the max x direction to go
                 maxItemsPerRowNeeded = nRows*7
                 repsNeeded = int(np.ceil(maxItemsPerRowNeeded/nCols))
                 print(f"Replicating {repsNeeded} times")
                 self.booleanRepresentation = np.tile(self.booleanRepresentation,repsNeeded)
                 pass
 
+    def writeTrajectoryToFile(self,trajectory,fileName):
+        with open(fileName,"w") as f:
+            trajectoryMatrix = self.__trajectoryToMatrix(trajectory)
+
+            shape = self.booleanRepresentation.shape
+            for nRow in range(shape[0]):
+                for nCol in range(shape[1]):
+                    if self.booleanRepresentation[nRow][nCol] == 1:
+                        f.write(self.polarBearChar)
+                    else:
+                        f.write(self.emptyCellChar)
+
+                    if trajectoryMatrix[nRow][nCol] == 1:
+                        f.write(self.trajectoryChar)
+                f.write("\n")
 
     def visualizeTrajectory(self,trajectory):
         trajectoryMatrix = self.__trajectoryToMatrix(trajectory)
@@ -67,7 +84,7 @@ class IceWorld:
                         print(self.polarBearChar, end='')
                 else:
                     if trajectoryMatrix[nRow][nCol] == 1:
-                        print(colored(self.emptyCellChar, 'green'), end='')
+                        print(colored(self.trajectoryChar, 'green'), end='')
                     else:
                         print(self.emptyCellChar, end='')
             print("\n")
@@ -84,12 +101,17 @@ class IceWorld:
             print("\n")
 
 
+    #returns a trajectory which is an array of tuples of the form (currentState,inputAction,newState,reward)
     def computeTrajectoryForOnlyOneAction(self,inputAction:tuple) -> int:
         currentState = (0,0,False)
         isTerminal = currentState[2]
         trajectory = []
         while not isTerminal:
-            newState,reward = self.performAction(currentState,inputAction)
+            try:
+                newState,reward = self.performAction(currentState,inputAction)
+            except:
+                print(f"Action {inputAction} not possible in current state {currentState}. Terminating...")
+                return []
             isTerminal = newState[2]
             trajectory.append((currentState,inputAction,newState,reward))
             currentState = newState

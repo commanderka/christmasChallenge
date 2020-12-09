@@ -13,8 +13,13 @@ class QLearningSolver:
         self.nStates = self.worldDimension[0] * self.worldDimension[1]
         self.nActions = len(self.iceWorld.actions)
         self.qTable = np.zeros((self.nStates,self.nActions))
+        #stop criterion
         self.trajectoriesWithoutChangeToStop = 10000
 
+    '''
+    Helper functions for converting state tuples to state values (integers) and back. 
+    This is needed to index the Q table properly, as we need integer values
+    '''
     def stateTupleToStateValue(self,stateTuple):
         return stateTuple[0] * stateTuple[1]
     def stateValueToStateTuple(self,stateValue):
@@ -25,12 +30,14 @@ class QLearningSolver:
         else:
             return (row, col, False)
 
+    #returns the best action index for the current state with respect to the current Q table
     def selectBestActionIndex(self,currentState,possibleActionIndices):
         stateValue = self.stateTupleToStateValue(currentState)
         maximizingIndex = np.argmax(self.qTable[stateValue,possibleActionIndices])
         bestActionIndex = possibleActionIndices[maximizingIndex]
         return bestActionIndex
 
+    #implements the Q valeu update (refer to literature)
     def updateQTable(self,state,actionIndex,nextState,reward):
         stateValue = self.stateTupleToStateValue(state)
         nextStateValue = self.stateTupleToStateValue(nextState)
@@ -39,10 +46,12 @@ class QLearningSolver:
         temporalDifference = reward + self.discountFactor * optimalFutureValueEstimate - oldQValue
         self.qTable[stateValue][actionIndex] = oldQValue + self.learningRate * temporalDifference
 
-    def doTrajectory(self) -> int:
+    #performs a trajectory, updates the Q table and quits if the trajectory is worse than the current best
+    def doTrajectory(self, currentBestAccumulatedRewards:int) -> tuple:
         accumulatedRewards = 0
         currentState = (0,0,False)
         isTerminal = currentState[2]
+        trajectory = []
         while not isTerminal:
             possibleActionIndices = self.iceWorld.getPossibleActionIndices(currentState)
             if np.random.rand() <self.epsilon:
@@ -54,11 +63,16 @@ class QLearningSolver:
             nextState,reward = self.iceWorld.performAction(currentState,action)
             accumulatedRewards += reward
             self.updateQTable(currentState,actionIndex,nextState,reward)
+            #break if current trajectory is not better than the current best trajectory
+            if accumulatedRewards < currentBestAccumulatedRewards:
+                return accumulatedRewards,trajectory
+            trajectory.append((currentState, action, nextState, reward))
             currentState = nextState
             isTerminal = currentState[2]
-        return accumulatedRewards
+        return accumulatedRewards, trajectory
 
-    def getOptimalTrajectory(self):
+    #computes the optimal trajectory by always selecting the action with the max Q value
+    def getOptimalTrajectoryBasedOnQTable(self):
         currentState = (0, 0, False)
         isTerminal = currentState[2]
         trajectory = []
@@ -79,7 +93,7 @@ class QLearningSolver:
         accumulatedRewards = - sys.maxsize -1
         nTrajectoriesWithoutChange = 0
         while nTrajectoriesWithoutChange < self.trajectoriesWithoutChangeToStop:
-            currentAccumulatedRewards = self.doTrajectory()
+            currentAccumulatedRewards,trajectory = self.doTrajectory(accumulatedRewards)
             if currentAccumulatedRewards > accumulatedRewards:
                 accumulatedRewards = currentAccumulatedRewards
                 nTrajectoriesWithoutChange = 0
@@ -87,7 +101,8 @@ class QLearningSolver:
                 nTrajectoriesWithoutChange += 1
             print(f"Current number of polar bears hit: {-accumulatedRewards}")
             if currentAccumulatedRewards == 0:
-                break
+                return trajectory,accumulatedRewards
+        return trajectory,accumulatedRewards
 
 
 
