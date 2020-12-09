@@ -67,8 +67,6 @@ class QLearningSolver:
 
             actionIndex = self.selectBestActionIndex(currentState, possibleActionIndices)
             action = self.iceWorld.actions[actionIndex]
-            if self.iceWorld.performAction(currentState, action) is None:
-                print("Hallo")
             nextState, reward = self.iceWorld.performAction(currentState, action)
             trajectory.append((currentState, action, nextState, reward))
             currentState = nextState
