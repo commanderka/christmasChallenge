@@ -82,13 +82,12 @@ class QLearningSolver:
         nTrajectoriesWithoutChange = 0
         while nTrajectoriesWithoutChange < self.trajectoriesWithoutChangeToStop:
             currentAccumulatedRewards = self.doTrajectory()
-            print(f"Current number of polar bears hit: {-accumulatedRewards}")
             if currentAccumulatedRewards > accumulatedRewards:
                 accumulatedRewards = currentAccumulatedRewards
                 nTrajectoriesWithoutChange = 0
             else:
                 nTrajectoriesWithoutChange += 1
-
+            print(f"Current number of polar bears hit: {-accumulatedRewards}")
             if currentAccumulatedRewards == 0:
                 break
 

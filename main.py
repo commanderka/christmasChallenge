@@ -14,6 +14,7 @@ if __name__ == '__main__':
     mySolver = QLearningSolver(myIceWorld)
     mySolver.solve()
     optimalTrajectory = mySolver.getOptimalTrajectory()
+    print(f"Optimal trajectory: {optimalTrajectory}")
     myIceWorld.visualizeTrajectory(optimalTrajectory)
 
 
