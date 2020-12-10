@@ -17,16 +17,16 @@ The world looks as follows:
 <table>
 <tr>
 <td width="16">
-<img src="santa.png">
+<img src="santa.png" width="16">
 </td>
 <td width="16">
-<img src="ice.png">
+<img src="ice.png" width="16">
 </td>
 <td width="16">
-<img src="polarbear.png">
+<img src="polarbear.png" width="16">
 </td>
 <td width="16">
-<img src="polarbear.png">
+<img src="polarbear.png" width="16">
 </td>
 </tr>
 
