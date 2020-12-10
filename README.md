@@ -3,8 +3,10 @@
 <td>
 <img src="santa.png" width="128" height="128" alt="Polarbear">
 </td>
-<td style="font-size:30px;font-weight:bold">
+<td>
+<p style="font-size:30px;font-weight:bold">
 Christmas Challenge
+</p>
 </td>
 <td>
 <img src="polarbear.png" width="128" height="128" alt="Santa">
