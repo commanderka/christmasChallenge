@@ -1,20 +1,5 @@
-<table  border="0">
-<tr>
-<td>
-<img src="santa.png" width="128" height="128" alt="Polarbear">
-</td>
-<td>
-<p class="h1">
-Christmas Challenge
-</p>
-</td>
-<td>
-<img src="polarbear.png" width="128" height="128" alt="Santa">
-</td>
 
-</tr>
-
-</table>
+| ![](santa.png) | # Christmas Challenge  | ![](polarbear.png)
 
 ## Task Description
 Santa Claus shall traverse a matrix grid world with his sledge from top to bottom.
