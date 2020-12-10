@@ -16,76 +16,76 @@ The world looks as follows:
 
 <table>
 <tr>
-<td width="16">
-<img src="santa.png" width="16">
+<td>
+<img src="santa.png">
 </td>
 <td width="16">
-<img src="ice.png" width="16">
+<img src="ice.png">
 </td>
-<td width="16">
-<img src="polarbear.png" width="16">
-</td>
-<td width="16">
-<img src="polarbear.png" width="16">
-</td>
-</tr>
-
-<tr>
-<td width="16">
+<td>
 <img src="polarbear.png">
 </td>
-<td width="16">
-<img src="ice.png">
-</td>
-<td width="16">
-<img src="ice.png">
-</td>
-<td width="16">
-<img src="ice.png">
-</td>
-</tr>
-
-<tr>
-<td width="16">
-<img src="ice.png">
-</td>
-<td width="16">
-<img src="polarbear.png">
-</td>
-<td width="16">
-<img src="ice.png">
-</td>
-<td width="16">
-<img src="ice.png">
-</td>
-</tr>
-
-<tr>
-<td width="16">
-<img src="ice.png">
-</td>
-<td width="16">
-<img src="ice.png">
-</td>
-<td width="16">
-<img src="ice.png">
-</td>
-<td width="16">
+<td>
 <img src="polarbear.png">
 </td>
 </tr>
 
 <tr>
-<td width="16">
-<img src="ice.png">
-</td>
-<td width="16">
+<td>
 <img src="polarbear.png">
 </td>
-<td width="16">
+<td>
 <img src="ice.png">
 </td>
-<td width="16">
+<td>
+<img src="ice.png">
+</td>
+<td>
+<img src="ice.png">
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="ice.png">
+</td>
+<td>
+<img src="polarbear.png">
+</td>
+<td>
+<img src="ice.png">
+</td>
+<td>
+<img src="ice.png">
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="ice.png">
+</td>
+<td>
+<img src="ice.png">
+</td>
+<td>
+<img src="ice.png">
+</td>
+<td>
+<img src="polarbear.png">
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="ice.png">
+</td>
+<td>
+<img src="polarbear.png">
+</td>
+<td>
+<img src="ice.png">
+</td>
+<td>
 <img src="ice.png">
 </td>
 </tr>
