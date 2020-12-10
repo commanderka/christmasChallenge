@@ -17,31 +17,31 @@ The world looks as follows:
 <table>
 <tr width="16">
 <td width="16">
-<img src="santa.png" size="16">
+<img src="santa.png">
 </td>
 <td width="16">
-<img src="ice.png" size="16"
+<img src="ice.png">
 </td>
 <td width="16">
-<img src="polarbear.png" size="16">
+<img src="polarbear.png">
 </td>
 <td width="16">
-<img src="polarbear.png" size="16">
+<img src="polarbear.png">
 </td>
 </tr>
 
 <tr width="16">
 <td width="16">
-<img src="polarbear.png" size="16">
+<img src="polarbear.png">
 </td>
 <td width="16">
-<img src="ice.png" size="16"
+<img src="ice.png">
 </td>
 <td width="16">
-<img src="ice.png" size="16">
+<img src="ice.png">
 </td>
 <td width="16">
-<img src="ice.png" size="16">
+<img src="ice.png">
 </td>
 </tr>
 
