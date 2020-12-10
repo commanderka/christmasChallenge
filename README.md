@@ -15,38 +15,38 @@ The world looks as follows:
 ```
 
 <table>
-<tr>
-<td>
+<tr width="16">
+<td width="16">
 <img src="santa.png" size="16">
 </td>
-<td>
+<td width="16">
 <img src="ice.png" size="16"
 </td>
-<td>
+<td width="16">
 <img src="polarbear.png" size="16">
 </td>
-<td>
+<td width="16">
 <img src="polarbear.png" size="16">
 </td>
 </tr>
 
-<tr>
-<td>
+<tr width="16">
+<td width="16">
 <img src="polarbear.png" size="16">
 </td>
-<td>
+<td width="16">
 <img src="ice.png" size="16"
 </td>
-<td>
+<td width="16">
 <img src="ice.png" size="16">
 </td>
-<td>
+<td width="16">
 <img src="ice.png" size="16">
 </td>
 </tr>
 
-<tr>
-<td>
+<tr width="16">
+<td width="16">
 <img src="ice.png">
 </td>
 <td width="16">
@@ -60,7 +60,7 @@ The world looks as follows:
 </td>
 </tr>
 
-<tr>
+<tr width="16">
 <td width="16">
 <img src="ice.png">
 </td>
@@ -75,7 +75,7 @@ The world looks as follows:
 </td>
 </tr>
 
-<tr>
+<tr width="16">
 <td width="16">
 <img src="ice.png">
 </td>
