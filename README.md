@@ -13,8 +13,13 @@ The world looks as follows:
 .#.. --> 
 
 ```
+<style>
+table.custom{
+   width:50%;
+}
+</style>
 
-<table>
+<table class="custom">
 <tr>
 <td>
 <img src="santa.png">
