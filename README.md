@@ -1,4 +1,19 @@
-# Christmas Challenge
+<table>
+<tr>
+<td>
+<img src="polarbear.png" width="256" height="256" alt="Polarbear">
+</td>
+<td>
+Christmas Challenge
+</td>
+<td>
+<img src="santa.png" width="256" height="256" alt="Santa">
+</td>
+
+</tr>
+
+</table>
+
 ## Task Description
 Santa Claus shall traverse a matrix grid world with his sledge from top to bottom.
 The world looks as follows:
@@ -49,7 +64,7 @@ The basic idea is to do as many trajectories from top to bottom and updating a t
 reward we have to expect when taking a specific action in a specific state. When doing a trajectory we generally use this table
 to select our action, nevertheless we do not want to get stuck in local minima. So we pick a random action with probability epsilon.
 Doing so we guarantee that we also do "unusal" things sometimes to explore the world.
-###Q-Learning algorithm
+### Q-Learning algorithm
 ![](qlearning.png)
 The update of the Q value (estimated reward for a state/action tuple) depends on the old Q value, the reward we get when reaching the new state and a discounted 
 estimate of the maximum reward we can expect from the new state. For this task I used the following hyperparameters which gave me good results right from the beginning:
