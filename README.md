@@ -13,85 +13,80 @@ The world looks as follows:
 .#.. --> 
 
 ```
-<style>
-table.custom{
-   width:50%;
-}
-</style>
 
 <table class="custom">
 <tr>
 <td>
-<img src="santa.png">
+<img src="santa_small.png">
 </td>
 <td>
-<img src="ice.png">
+<img src="ice_small.png">
 </td>
 <td>
-<img src="polarbear.png">
+<img src="polarbear_small.png">
 </td>
 <td>
-<img src="polarbear.png">
-</td>
-</tr>
-
-<tr>
-<td>
-<img src="polarbear.png">
-</td>
-<td>
-<img src="ice.png">
-</td>
-<td>
-<img src="ice.png">
-</td>
-<td>
-<img src="ice.png">
+<img src="polarbear_small.png">
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="ice.png">
+<img src="polarbear_small.png">
 </td>
 <td>
-<img src="polarbear.png">
+<img src="ice_small.png">
 </td>
 <td>
-<img src="ice.png">
+<img src="ice_small.png">
 </td>
 <td>
-<img src="ice.png">
-</td>
-</tr>
-
-<tr>
-<td>
-<img src="ice.png">
-</td>
-<td>
-<img src="ice.png">
-</td>
-<td>
-<img src="ice.png">
-</td>
-<td>
-<img src="polarbear.png">
+<img src="ice_small.png">
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="ice.png">
+<img src="ice_small.png">
 </td>
 <td>
-<img src="polarbear.png">
+<img src="polarbear_small.png">
 </td>
 <td>
-<img src="ice.png">
+<img src="ice_small.png">
 </td>
 <td>
-<img src="ice.png">
+<img src="ice_small.png">
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="ice_small.png">
+</td>
+<td>
+<img src="ice_small.png">
+</td>
+<td>
+<img src="ice_small.png">
+</td>
+<td>
+<img src="polarbear_small.png">
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="ice_small.png">
+</td>
+<td>
+<img src="polarbear_small.png">
+</td>
+<td>
+<img src="ice_small.png">
+</td>
+<td>
+<img src="ice_small.png">
 </td>
 </tr>
 
