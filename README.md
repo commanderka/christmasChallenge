@@ -1,13 +1,13 @@
-<table>
+<table  border="0">
 <tr>
 <td>
-<img src="polarbear.png" width="256" height="256" alt="Polarbear">
+<img src="santa.png" width="128" height="128" alt="Polarbear">
 </td>
-<td>
+<td style="font-size:30px;font-weight:bold">
 Christmas Challenge
 </td>
 <td>
-<img src="santa.png" width="256" height="256" alt="Santa">
+<img src="polarbear.png" width="128" height="128" alt="Santa">
 </td>
 
 </tr>
