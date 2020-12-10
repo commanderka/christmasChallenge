@@ -19,7 +19,7 @@ The world looks as follows:
 <td>
 <img src="santa.png">
 </td>
-<td width="16">
+<td>
 <img src="ice.png">
 </td>
 <td>
