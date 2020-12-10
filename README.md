@@ -47,46 +47,46 @@ The world looks as follows:
 
 <tr>
 <td>
-<img src="ice.png" size="16">
+<img src="ice.png">
 </td>
-<td>
-<img src="polarbear.png" size="16"
+<td width="16">
+<img src="polarbear.png">
 </td>
-<td>
-<img src="ice.png" size="16">
+<td width="16">
+<img src="ice.png">
 </td>
-<td>
-<img src="ice.png" size="16">
-</td>
-</tr>
-
-<tr>
-<td>
-<img src="ice.png" size="16">
-</td>
-<td>
-<img src="ice.png" size="16"
-</td>
-<td>
-<img src="ice.png" size="16">
-</td>
-<td>
-<img src="polarbear.png" size="16">
+<td width="16">
+<img src="ice.png">
 </td>
 </tr>
 
 <tr>
-<td>
-<img src="ice.png" size="16">
+<td width="16">
+<img src="ice.png">
 </td>
-<td>
-<img src="polarbear.png" size="16">
+<td width="16">
+<img src="ice.png">
 </td>
-<td>
-<img src="ice.png" size="16">
+<td width="16">
+<img src="ice.png">
 </td>
-<td>
-<img src="ice.png" size="16">
+<td width="16">
+<img src="polarbear.png">
+</td>
+</tr>
+
+<tr>
+<td width="16">
+<img src="ice.png">
+</td>
+<td width="16">
+<img src="polarbear.png">
+</td>
+<td width="16">
+<img src="ice.png">
+</td>
+<td width="16">
+<img src="ice.png">
 </td>
 </tr>
 
