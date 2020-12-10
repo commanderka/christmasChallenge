@@ -4,8 +4,8 @@
 <img src="santa.png" width="128" height="128" alt="Polarbear">
 </td>
 <td>
-<p class="h1">
-Christmas Challenge
+<p>
+<font size="14" weight="bold">Christmas Challenge</font>
 </p>
 </td>
 <td>
