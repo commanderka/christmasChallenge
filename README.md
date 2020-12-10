@@ -13,6 +13,87 @@ The world looks as follows:
 .#.. --> 
 
 ```
+
+<table>
+<tr>
+<td>
+<img src="santa.png" size="32">
+</td>
+<td>
+<img src="ice.png" size="32"
+</td>
+<td>
+<img src="polarbear.png" size="32">
+</td>
+<td>
+<img src="polarbear.png" size="32">
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="polarbear.png" size="32">
+</td>
+<td>
+<img src="ice.png" size="32"
+</td>
+<td>
+<img src="ice.png" size="32">
+</td>
+<td>
+<img src="ice.png" size="32">
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="ice.png" size="32">
+</td>
+<td>
+<img src="polarbear.png" size="32"
+</td>
+<td>
+<img src="ice.png" size="32">
+</td>
+<td>
+<img src="ice.png" size="32">
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="ice.png" size="32">
+</td>
+<td>
+<img src="ice.png" size="32"
+</td>
+<td>
+<img src="ice.png" size="32">
+</td>
+<td>
+<img src="polarbear.png" size="32">
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="ice.png" size="32">
+</td>
+<td>
+<img src="polarbear.png" size="32"
+</td>
+<td>
+<img src="ice.png" size="32">
+</td>
+<td>
+<img src="ice.png" size="32">
+</td>
+</tr>
+
+
+</table>
+
+
 It consists of m rows an n columns, while an empty cell is marked by a "." and a polar bear is marked by a "#".
 The goal is to jump from the start square in the top left corner (0,0) to the bottom, such that as few as possible 
 polar bears are hit. 
