@@ -1,7 +1,7 @@
 
-# Christmas Challenge <img src="santa.png" width="128">
+# Christmas Challenge <img src="santa.png" width="64">
 
-## Task Description
+## Task Description <img src="polarbear.png" width="64"
 Santa Claus shall traverse a matrix grid world with his sledge from top to bottom.
 The world looks as follows:
 
