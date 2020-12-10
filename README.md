@@ -1,5 +1,5 @@
 
-# Christmas Challenge <img src="santa.png" width="64"> <img src="polarbear.png" width="64">
+# Christmas Challenge <img src="images/santa.png" width="64"> <img src="images/polarbear.png" width="64">
 
 ## Task Description 
 Santa Claus shall traverse a matrix grid world with his sledge from top to bottom.
@@ -17,76 +17,76 @@ The world looks as follows:
 <table class="custom">
 <tr>
 <td>
-<img src="santa_small.png">
+<img src="images/santa_small.png">
 </td>
 <td>
-<img src="ice_small.png">
+<img src="images/ice_small.png">
 </td>
 <td>
-<img src="polarbear_small.png">
+<img src="images/polarbear_small.png">
 </td>
 <td>
-<img src="polarbear_small.png">
-</td>
-</tr>
-
-<tr>
-<td>
-<img src="polarbear_small.png">
-</td>
-<td>
-<img src="ice_small.png">
-</td>
-<td>
-<img src="ice_small.png">
-</td>
-<td>
-<img src="ice_small.png">
+<img src="images/polarbear_small.png">
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="ice_small.png">
+<img src="images/polarbear_small.png">
 </td>
 <td>
-<img src="polarbear_small.png">
+<img src="images/ice_small.png">
 </td>
 <td>
-<img src="ice_small.png">
+<img src="images/ice_small.png">
 </td>
 <td>
-<img src="ice_small.png">
-</td>
-</tr>
-
-<tr>
-<td>
-<img src="ice_small.png">
-</td>
-<td>
-<img src="ice_small.png">
-</td>
-<td>
-<img src="ice_small.png">
-</td>
-<td>
-<img src="polarbear_small.png">
+<img src="images/ice_small.png">
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="ice_small.png">
+<img src="images/ice_small.png">
 </td>
 <td>
-<img src="polarbear_small.png">
+<img src="images/polarbear_small.png">
 </td>
 <td>
-<img src="ice_small.png">
+<img src="images/ice_small.png">
 </td>
 <td>
-<img src="ice_small.png">
+<img src="images/ice_small.png">
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/ice_small.png">
+</td>
+<td>
+<img src="images/ice_small.png">
+</td>
+<td>
+<img src="images/ice_small.png">
+</td>
+<td>
+<img src="images/polarbear_small.png">
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/ice_small.png">
+</td>
+<td>
+<img src="images/polarbear_small.png">
+</td>
+<td>
+<img src="images/ice_small.png">
+</td>
+<td>
+<img src="images/ice_small.png">
 </td>
 </tr>
 
@@ -133,7 +133,7 @@ reward we have to expect when taking a specific action in a specific state. When
 to select our action, nevertheless we do not want to get stuck in local minima. So we pick a random action with probability epsilon.
 Doing so we guarantee that we also do "unusal" things sometimes to explore the world.
 ### Q-Learning algorithm
-![](qlearning.png)
+![](images/qlearning.png)
 The update of the Q value (estimated reward for a state/action tuple) depends on the old Q value, the reward we get when reaching the new state and a discounted 
 estimate of the maximum reward we can expect from the new state. For this task I used the following hyperparameters which gave me good results right from the beginning:
 * alpha = 0.1
